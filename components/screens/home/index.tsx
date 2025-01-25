@@ -2,18 +2,37 @@ import { DeployButton } from "@/components/deploy";
 import { Footer } from "@/components/footer";
 import * as FadeIn from "@/components/motion/staggers/fade";
 import { Posts } from "@/components/posts";
+import { cn } from "@/lib/cn";
+import { Link } from "next-view-transitions";
 
 const Spacer = () => <div style={{ marginTop: "24px" }} />;
+
+const NavButton = ({ href, children }: { href: string; children: React.ReactNode }) => (
+  <Link
+    href={href}
+    className={cn(
+      "text-small px-3 transition-all",
+      "hover:opacity-75 hover:bg-gray-5 rounded-[4px]"
+    )}
+  >
+    {children}
+  </Link> 
+);
 
 export default function Home() {
   return (
     <FadeIn.Container>
       <FadeIn.Item>
-        <div className="flex justify-between">
-          <div>
-            <h1>Sylph</h1>
-            <h2>Next.js Portfolio Starter</h2>
+        <div>
+          <div className="flex justify-between">
+            <h1>Evan Zimmerman</h1>
+            <nav className="flex gap-2">
+              <NavButton href="/about">About</NavButton>
+              <NavButton href="/projects">Projects</NavButton>
+              <NavButton href="/blog">Blog</NavButton>
+            </nav>
           </div>
+          <h2 className="mt-1">Software & Quantitative Developer · Triathlete · Digital Artist</h2>
         </div>
       </FadeIn.Item>
       <Spacer />

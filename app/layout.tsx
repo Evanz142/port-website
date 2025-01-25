@@ -10,6 +10,15 @@ import { Inter } from "next/font/google";
 
 export const metadata: Metadata = {
   ...OpenGraph,
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/favicon.png',
+    },
+  },
 };
 
 const inter = Inter({
