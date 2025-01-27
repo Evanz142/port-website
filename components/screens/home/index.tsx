@@ -11,7 +11,7 @@ const NavButton = ({ href, children }: { href: string; children: React.ReactNode
   <Link
     href={href}
     className={cn(
-      "text-small px-3 transition-all",
+      "px-3 transition-all",
       "hover:opacity-75 hover:bg-gray-5 rounded-[4px]"
     )}
   >
@@ -27,9 +27,9 @@ export default function Home() {
           <div className="flex justify-between">
             <h1>Evan Zimmerman</h1>
             <nav className="flex gap-2">
-              <NavButton href="/about">About</NavButton>
-              <NavButton href="/projects">Projects</NavButton>
-              <NavButton href="/blog">Blog</NavButton>
+              <NavButton href="/about"><h1>About</h1></NavButton>
+              <NavButton href="/projects"><h1>Projects</h1></NavButton>
+              <NavButton href="/blog"><h1>Blog</h1></NavButton>
             </nav>
           </div>
           <h2 className="mt-1">Software & Quantitative Developer · Triathlete · Digital Artist</h2>
