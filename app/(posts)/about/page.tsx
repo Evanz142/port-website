@@ -1,5 +1,4 @@
 import * as FadeIn from "@/components/motion/staggers/fade";
-import { Posts } from "@/components/posts";
 import { OpenGraph } from "@/lib/og";
 
 import React from "react";
@@ -25,7 +24,8 @@ export default function Page() {
   return (
     <React.Fragment>
       <FadeIn.Item>
-        <Posts category="about" />
+        {/* <Posts category="about" /> */}
+        <h1>bruh</h1>
       </FadeIn.Item>
     </React.Fragment>
   );
