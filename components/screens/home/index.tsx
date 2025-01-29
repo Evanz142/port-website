@@ -12,7 +12,7 @@ const NavButton = ({ href, children }: { href: string; children: React.ReactNode
     href={href}
     className={cn(
       "px-3 transition-all",
-      "hover:opacity-75 hover:bg-gray-5 rounded-[4px]"
+      "rounded-[4px] hover:bg-gray-5 hover:opacity-75"
     )}
   >
     {children}
@@ -38,17 +38,18 @@ export default function Home() {
       <Spacer />
       <FadeIn.Item>
         <p>
-          Sylph is a Next.js Portfolio Starter that you can use to create your own portfolio website. It is designed to be minimal, lightweight, and fast. It is
-          also highly customizable, so you can easily make it your own. Sylph is perfect for developers, designers, and other creatives who want to showcase
-          their work. To start using Sylph, you can follow the guides below.
+          This site acts as an interactive resume where you can see everything I've built. The projects tab contains larger, built out endevours, and the blog has small projects and research where I provide more written context.
+        </p>
+        <p>
+          If you'd like to learn more about me, navigate to the about tab :D
         </p>
       </FadeIn.Item>
       <FadeIn.Item>
         <Posts category="blog" />
       </FadeIn.Item>
-      <FadeIn.Item>
+      {/* <FadeIn.Item>
         <Posts category="examples" />
-      </FadeIn.Item>
+      </FadeIn.Item> */}
       <Spacer />
       <FadeIn.Item>
         <Footer />
